@@ -8,8 +8,10 @@ env:
 
 jobs:
   build:
+    env: 
+      TEST2: ${{env.TEST}}
     runs-on: ubuntu-latest
-    if: contains('test', env.TEST)
+    if: contains('test', TEST2)
     steps:
       - name: Run a multi-line script
         env:
