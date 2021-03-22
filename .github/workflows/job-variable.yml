@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKER_IMAGE: ${{env.DOCKER_URL}}/image:latest
+    if: contains('some.docker.url/image:latest123', DOCKER_IMAGE)
     steps:
       - name: Run a multi-line script
         run: |
