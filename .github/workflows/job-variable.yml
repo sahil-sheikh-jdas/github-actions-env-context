@@ -1,6 +1,7 @@
 name: Job Variable Workflow
 
-on: [push]
+on: [push, workflow_dispatch]
+
 
 env:
   DOCKER_URL: some.docker.url
