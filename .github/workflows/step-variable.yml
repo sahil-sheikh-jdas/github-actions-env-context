@@ -9,6 +9,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TEST_STR1: ${{env.TEST}}/abc2
     steps:
       - name: Run a multi-line script
         env:
