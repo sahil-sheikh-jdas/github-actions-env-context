@@ -1,6 +1,6 @@
 name: Job/Step Variable Workflow
 
-on: [push]
+on: push
 
 env:
   DOCKER_URL: some.docker.url
