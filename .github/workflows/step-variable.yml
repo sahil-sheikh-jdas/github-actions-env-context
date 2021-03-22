@@ -4,10 +4,12 @@ on: [push]
 
 env:
   DOCKER_URL: some.docker.url
+  TEST: 'test'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: contains('test', env.TEST)
     steps:
       - name: Run a multi-line script
         env:
